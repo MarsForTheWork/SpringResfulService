@@ -16,4 +16,8 @@ public class ProductDetailService {
 	public List<ProductDetail> findAll() {
 		return productDetailRepository.findAll();
 	}
+	
+	public ProductDetail findOne(String uuid) {
+		return productDetailRepository.findOne(uuid);
+	}
 }
