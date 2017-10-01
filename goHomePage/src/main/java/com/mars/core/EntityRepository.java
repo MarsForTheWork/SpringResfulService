@@ -1,4 +1,4 @@
-package com.mars.model;
+package com.mars.core;
 
 import java.io.Serializable;
 

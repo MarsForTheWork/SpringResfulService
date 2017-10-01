@@ -3,6 +3,7 @@ package com.mars.model;
 
 import org.springframework.stereotype.Repository;
 
+import com.mars.core.EntityRepository;
 import com.mars.entity.ProductDetail;
 
 

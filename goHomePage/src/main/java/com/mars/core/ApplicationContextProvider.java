@@ -1,4 +1,4 @@
-package com.mars.model;
+package com.mars.core;
 
 
 import org.springframework.beans.BeansException;
