@@ -1,4 +1,4 @@
-package com.mars.model;
+package com.mars.entity;
 // Generated 2017/9/30 �U�� 03:28:16 by Hibernate Tools 4.3.5.Final
 
 import java.math.BigDecimal;
@@ -20,16 +20,16 @@ public class ProductDetail implements java.io.Serializable {
 	private String uuid;
 	private String name;
 	private BigDecimal prize;
-	private Date date;
+	private Date createDate;
 
 	public ProductDetail() {
 	}
 
-	public ProductDetail(String uuid, String name, BigDecimal prize, Date date) {
+	public ProductDetail(String uuid, String name, BigDecimal prize, Date createDate) {
 		this.uuid = uuid;
 		this.name = name;
 		this.prize = prize;
-		this.date = date;
+		this.createDate = createDate;
 	}
 
 	@Id
@@ -62,13 +62,13 @@ public class ProductDetail implements java.io.Serializable {
 	}
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "DATE", nullable = false, length = 7)
-	public Date getDate() {
-		return this.date;
+	@Column(name = "CREATE_DATE", nullable = false, length = 7)
+	public Date getCreateDate() {
+		return this.createDate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
 	}
 
 }
