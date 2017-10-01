@@ -11,3 +11,4 @@ import com.mars.entity.ProductDetail;
 public interface ProductDetailRepository extends EntityRepository<ProductDetail, String> {
 
 }
+ 
