@@ -20,4 +20,8 @@ public class ProductDetailService {
 	public ProductDetail findOne(String uuid) {
 		return productDetailRepository.findOne(uuid);
 	}
+	
+	public List<ProductDetail> custFindBySelectDate(String start, String end) {
+		return productDetailRepository.findBySelectDate(start, end);
+	}
 }
