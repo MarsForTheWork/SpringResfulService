@@ -18,5 +18,7 @@ public interface ProductDetailRepository extends EntityRepository<ProductDetail,
 	 		+ "AND CREATE_DATE < TO_DATE(?2, 'YYYY-MM-DD')"
 	            , nativeQuery = true)
 	  public List<ProductDetail> findBySelectDate(String start, String end);
+	 
+	  public ProductDetail findByName(String name);
 }
  

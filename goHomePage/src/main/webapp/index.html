@@ -1,12 +1,99 @@
-<html>
+﻿<html>
 <header>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="index.js"></script>
 </header>
 <body>
-<h2>Hello World2!</h2>
+	<h1>Spring Restful Api</h1>
+		
+	<input type="button" value="新增" id="insertButton" />
+	
+	<table border="1" id="reportList">
+		<colgroup>
+			<col width="20%">
+			<col width="15%">
+			<col width="15%">
+			<col width="15%">
+			<col width="15%">
+			<col width="10%">
+		</colgroup>
+		<tr>
+			<th>ID</th>
+			<th>名稱</th>
+			<th>修改日期</th>
+			<th>價格</th>
+			<th>pick one</th>
+			<th>刪除</th>
+		</tr>
+		<tbody class="dataTemplate">
+			<tr>
+				<td class="id"></td>
+				<td class="name"></td>
+				<td class="dateTime"></td>
+				<td class="prize"></td>
+				<td class="select"><input type="button" class="selectOne"
+					id="selectOne" name="selectOne" /></td>
+				<td id="delete"><input type="button" class="deleteOne"
+					id="deleteOne" name="deleteOne" value="刪除" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<input type="date" value="起日" id="startDate" />
+	<input type="date" value="結束日" id="endDate" />
+	<input type="button" value="查詢" id="searchByDate" />
+	<br>
+	<div id="insert" style="display: none;">
+		<form action="/" id="insertForm">
+			<table border="0" id="reportList">
+				<tr>
+					<td><h3 id="insertOrUpdate"></h3></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ID:</td>
+					<td><input type="text" name="formId" id="formId" size="10" />
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<td>
+						<div id="emailError"></div> 名稱:
+					</td>
+					<td><input type="text" name="formName" size="10" id="formName" />
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<td>
+						<div id="prizeError"></div> 價格:
+					</td>
+					<td><input type="text" name="formPrize" size="10"
+						id="formPrize" /></td>
+				</tr>
+				<br>
+				<tr>
+					<td>
+						<div id="passError"></div> 修改日期:
+					</td>
+					<td><input type="date" name="formDateTime" size="10"
+						id="formDateTime" /></td>
+				</tr>
+				<br>
+				<div id="passConfError"></div>
+				<tr>
+					<td><input type="button" value="送出" id="sendInsert" /><input
+						type="button" value="取消" id="cancel"/></td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="body"></div>
 </body>
 </html>

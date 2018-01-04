@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mars.entity.ProductDetail;
 
@@ -17,11 +18,20 @@ public class ProductDetailService {
 		return productDetailRepository.findAll();
 	}
 	
-	public ProductDetail findOne(String uuid) {
-		return productDetailRepository.findOne(uuid);
+	public ProductDetail findById(String id) {
+		return productDetailRepository.findOne(id);
+	}
+	
+	@Transactional(rollbackFor=Exception.class)
+	public ProductDetail insert(ProductDetail productDetail) {
+		return productDetailRepository.save(productDetail);
 	}
 	
 	public List<ProductDetail> custFindBySelectDate(String start, String end) {
 		return productDetailRepository.findBySelectDate(start, end);
+	}
+	
+	public void delete(String id) {
+		productDetailRepository.delete(id);
 	}
 }
